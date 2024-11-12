@@ -1,0 +1,26 @@
+Requirements:
+Up to 5 LAGs,
+Up to 16 LAG_MEMBERs,
+Up to 32 PORTs,
+Supported LAG attributes: PORT_LIST,
+Supported LAG_MEMBER attributes: PORT_ID, LAG_ID.
+
+
+1. Check that LAG can be created (base case).
+2. Check that port can be added to LAG with correct parameters
+3. Check that appropriate error message is displayed when trying to create lag member with missing/invalid PORT_ID
+4. Check that appropriate error message is displayed when trying to create lag member with missing/invalid LAG_ID
+5. Check that multiple LAGs can be created (up to 5)
+6. Check that appropriate error message is returned when trying to create 6th LAG
+7. Check that last created LAG can be removed
+8. Check that previously created LAG can be removed (out of creation order)
+9. Check that empty LAG can be removed
+10. Check that LAG with ports added can be removed
+11. Check that multiple ports can be added to the LAG(up to 16)
+12. Check that correct error message is returned when trying to ad 17th port to LAG
+13. Check that last added port can be removed from the LAG
+14. Check that previously added port (not the last one) can be removed from the LAG
+15. Check that all ports can be removed from the LAG
+16. Check that correct LAG_MEMBER attributes are returned for LAG_MEMBERs
+17. Check that correct PORT_LIST is returned for lag
+18. Check that apropriate error message is returned when trying to add already existing port to LAG
